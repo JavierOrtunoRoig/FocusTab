@@ -1,34 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import FlexContainer from '@/components/FlexLayout/FlexContainer'
+import FlexItem from '@/components/FlexLayout/FlexItem'
+import { BookmarksContainer } from './components/widgets/BookmarksContainer'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <div className='bg-black h-8'>
+        <p>Title</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <FlexContainer>
+        <FlexItem>
+          <div>
+            <BookmarksContainer />
+          </div>
+        </FlexItem>
+        <FlexItem>
+          <div className="border rounded border-blue-500">Content 2</div>
+        </FlexItem>
+        <FlexItem>
+          <div className="border rounded border-violet-500">Content 3</div>
+        </FlexItem>
+      </FlexContainer>
+    </div>
   )
 }
 
