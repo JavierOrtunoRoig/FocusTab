@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prepare:extension": "pnpm build && node move-files.js",
+    "extension:build": "pnpm build && node move-files.js",
+    "extension:dev": "chokidar src/**/*.{ts,js,jsx,tsx,css} -c \"pnpm extension:build\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -20,6 +21,7 @@
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
+    "chokidar-cli": "^3.0.0",
     "eslint": "^9.17.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
