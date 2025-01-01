@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+# Focus Tab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Focus Tab is a modern, intuitive browser extension designed to revolutionize how users interact with new browser tabs. By replacing the default new tab page with a customizable, highly functional dashboard, Focus Tab aims to boost productivity and provide quick access to essential tools and information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Features
 
-## Expanding the ESLint configuration
+- Customizable Widgets: Add widgets such as weather forecasts, task lists, and bookmark groups.
+- Personalization: Adjust layouts, colors, and functionality to suit your needs.
+- Minimalist Design: A sleek, distraction-free interface to keep users focused.
+- Future Synchronization: (Coming soon) Sync settings and widgets across devices.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Motivation
 
-- Configure the top-level `parserOptions` property like this:
+Focus Tab was inspired by the observation that many existing new tab extensions lack regular updates, modern designs, or essential features. For instance, while Start.me is popular, it has not received significant updates in years, leaving room for innovation.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Focus Tab aims to:
+
+- Deliver a seamless, updated experience leveraging modern web technologies.
+- Empower users to personalize their productivity dashboards.
+- Combine essential tools like weather, task lists, and bookmarks into one interface.
+- Provide a fresh, reliable alternative to outdated solutions.
+
+## Getting Started
+
+1. Clone this repository:
+
+```
+git clone https://github.com/yourusername/focus-tab.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
+npm install
+```
+
+3. Run the development server:
+
+```
+npm run dev
+```
+
+4. Build the extension for production:
+
+```
+npm run build
+```
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, please:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Submit a pull request with a detailed description of your changes.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Thank you for using Focus Tab!
