@@ -1,6 +1,6 @@
 import FlexContainer from '@/components/FlexLayout/FlexContainer'
 import FlexItem from '@/components/FlexLayout/FlexItem'
-import { BookmarksContainer } from './components/widgets/BookmarksContainer'
+import { BookmarksWidget } from './components/widgets/bookmarks'
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
       <FlexContainer>
         <FlexItem>
           <div>
-            <BookmarksContainer />
+            <BookmarksWidget />
           </div>
         </FlexItem>
         <FlexItem>

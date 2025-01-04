@@ -1,19 +1,16 @@
 import { useBookmarksStore } from "@/stores/useBookmarks";
-import { Bookmark } from "./Bookmark"
-import { EditBookmarkHeader } from "./EditBookmarkHeader";
-import { Widget } from "./widget/Widget";
-import { WidgetHeader } from "./widget/WidgetHeader";
-import { WidgetContent } from "./widget/WidgetContent";
-import { WidgetSeparator } from "./widget/WidgetSeparator";
+import { Widget, WidgetContent, WidgetHeader, WidgetSeparator } from "../widget";
+import { Bookmark } from "./Bookmark";
+import { BookmarksSeetings } from "./EditBookmarkHeader";
 
-export const BookmarksContainer = () => {
+export const BookmarksWidget = () => {
 
   const bookmarks = useBookmarksStore(state => state.bookmarks);
 
    return (
     <Widget>
       <WidgetHeader>
-        <EditBookmarkHeader />
+        <BookmarksSeetings />
       </WidgetHeader>
       <WidgetSeparator />
       <WidgetContent>
