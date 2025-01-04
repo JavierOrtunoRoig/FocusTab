@@ -43,10 +43,10 @@ export const TodolistWidget = () => {
         </div>
         {
           tasks.map((task, index) => (
-            <>
+            <div key={task.id}>
               <div className="flex p-1 gap-2 justify-between">
                 <div className="flex gap-2">
-                  <input type="checkbox" checked={task.completed} defaultChecked={task.completed} onChange={() => toggleCompleted(task)} />
+                  <input type="checkbox" checked={task.completed} onChange={() => toggleCompleted(task)} />
                   <p className={`${task.completed && 'line-through'}`} onClick={() => toggleCompleted(task)}>{task.title}</p>
                 </div>
                 <Button variant="ghost" size="iconSm" onClick={() => deleteTask(task)}>
@@ -54,7 +54,7 @@ export const TodolistWidget = () => {
                 </Button>
               </div>
               {index !== tasks.length - 1 && <Separator />}
-            </>
+            </div>
           ))
         }
         </div>
