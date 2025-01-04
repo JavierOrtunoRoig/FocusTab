@@ -6,10 +6,12 @@ import { BookmarksSeetings } from "./EditBookmarkHeader";
 export const BookmarksWidget = () => {
 
   const bookmarks = useBookmarksStore(state => state.bookmarks);
+  const title = useBookmarksStore(state => state.title);
+  const changeWidgetTitle = useBookmarksStore(state => state.changeWidgetTitle);
 
    return (
     <Widget>
-      <WidgetHeader>
+      <WidgetHeader title={title} changeWidgetTitle={changeWidgetTitle}>
         <BookmarksSeetings />
       </WidgetHeader>
       <WidgetSeparator />

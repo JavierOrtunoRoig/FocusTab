@@ -32,7 +32,6 @@ export const BookmarkRow = ({ title, url, showSeparator }: Props) => {
     setNewTitle(title);
   };
 
-
   return (
     <div>
       <div className="py-1 flex justify-between">

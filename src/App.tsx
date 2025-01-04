@@ -1,6 +1,7 @@
 import FlexContainer from '@/components/FlexLayout/FlexContainer'
 import FlexItem from '@/components/FlexLayout/FlexItem'
 import { BookmarksWidget } from './components/widgets/bookmarks'
+import { TodolistWidget } from './components/widgets/todolist/TodolistWidget'
 
 function App() {
 
@@ -16,7 +17,9 @@ function App() {
           </div>
         </FlexItem>
         <FlexItem>
-          <div className="border rounded border-blue-500">Content 2</div>
+          <div>
+            <TodolistWidget />
+          </div>
         </FlexItem>
         <FlexItem>
           <div className="border rounded border-violet-500">Content 3</div>
